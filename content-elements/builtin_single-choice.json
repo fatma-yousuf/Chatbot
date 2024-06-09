@@ -1,0 +1,137 @@
+[
+  {
+    "id": "builtin_single-choice-wsrRYp",
+    "formData": {
+      "dropdownPlaceholder$ar": "Select...",
+      "choices$ar": [
+        {
+          "title": "أشخاص مفقوده",
+          "value": "missing people"
+        },
+        {
+          "title": "أشياء مفقوده",
+          "value": "missing things"
+        },
+        {
+          "title": "نصائح والإرشادات",
+          "value": "tips"
+        },
+        {
+          "title": "أنشاء منشور",
+          "value": "create post"
+        },
+        {
+          "title": "الرجوع للرئيسيه",
+          "value": "main"
+        },
+        {
+          "title": "مستشفيات و ملاجئ",
+          "value": "hospital 🏥 "
+        }
+      ],
+      "markdown$ar": true,
+      "disableFreeText$ar": true,
+      "typing$ar": true,
+      "text$ar": "اختر واحده من هذه الخدمات يا صديق !"
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-20T20:30:47.404Z",
+    "modifiedOn": "2024-04-29T17:26:00.204Z"
+  },
+  {
+    "id": "builtin_single-choice-vsJT1D",
+    "formData": {
+      "dropdownPlaceholder$ar": "Select...",
+      "choices$ar": [
+        {
+          "title": "البلاغ عن مفقود",
+          "value": "lost"
+        },
+        {
+          "value": "find",
+          "title": "البلاغ عن إيجاد مفقود"
+        }
+      ],
+      "markdown$ar": true,
+      "disableFreeText$ar": true,
+      "typing$ar": true,
+      "text$ar": "نوع الإبلاغ "
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T15:50:28.201Z",
+    "modifiedOn": "2024-04-24T15:51:16.461Z"
+  },
+  {
+    "id": "builtin_single-choice-w77A8D",
+    "formData": {
+      "dropdownPlaceholder$ar": "Select...",
+      "choices$ar": [
+        {
+          "title": "شخص مفقود",
+          "value": "missing people"
+        },
+        {
+          "value": "missing things",
+          "title": "متعلقات شخصيه "
+        }
+      ],
+      "markdown$ar": true,
+      "disableFreeText$ar": true,
+      "typing$ar": true,
+      "text$ar": "هل هذا المنشور يخص المتعلقات الشخصيه ام الاشخاص؟"
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T16:37:03.859Z",
+    "modifiedOn": "2024-04-24T16:37:03.859Z"
+  },
+  {
+    "id": "builtin_single-choice-xBuGas",
+    "formData": {
+      "dropdownPlaceholder$ar": "Select...",
+      "choices$ar": [
+        {
+          "title": "حوادث",
+          "value": "Accidents"
+        },
+        {
+          "title": "مفقودات",
+          "value": "losties"
+        },
+        {
+          "title": "ملاجئ",
+          "value": "shelters"
+        }
+      ],
+      "markdown$ar": true,
+      "disableFreeText$ar": true,
+      "typing$ar": true,
+      "text$ar": "حدد حاله الشخص المفقود...."
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T17:45:28.586Z",
+    "modifiedOn": "2024-04-24T17:45:28.586Z"
+  },
+  {
+    "id": "builtin_single-choice-Il7pvD",
+    "formData": {
+      "dropdownPlaceholder$ar": "Select...",
+      "choices$ar": [
+        {
+          "title": "ذكر",
+          "value": "male"
+        },
+        {
+          "value": "female",
+          "title": "أنثي"
+        }
+      ],
+      "markdown$ar": true,
+      "disableFreeText$ar": true,
+      "typing$ar": true,
+      "text$ar": "اختر نوع المفقود.."
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T18:06:22.447Z",
+    "modifiedOn": "2024-04-24T18:06:22.447Z"
+  }
+]

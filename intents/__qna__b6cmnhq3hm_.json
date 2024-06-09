@@ -1,0 +1,14 @@
+{
+  "name": "__qna__b6cmnhq3hm_",
+  "entities": [],
+  "contexts": [
+    "global"
+  ],
+  "utterances": {
+    "ar": [
+      "كيف حالك",
+      "أخبارك"
+    ]
+  },
+  "slots": []
+}

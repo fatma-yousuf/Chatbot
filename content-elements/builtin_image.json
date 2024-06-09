@@ -1,0 +1,13 @@
+[
+  {
+    "id": "builtin_image--dohkm",
+    "formData": {
+      "typing$ar": true,
+      "image$ar": "{{event.state.session.is_valid.data.0.imageUrl}}",
+      "title$ar": "الصوره"
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-29T18:42:45.256Z",
+    "modifiedOn": "2024-04-29T18:42:45.256Z"
+  }
+]

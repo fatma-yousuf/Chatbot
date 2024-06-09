@@ -1,0 +1,23 @@
+{
+  "id": "a3bqwg9xee_",
+  "data": {
+    "action": "text",
+    "contexts": [
+      "global"
+    ],
+    "enabled": true,
+    "answers": {
+      "ar": [
+        "وعليكم السلام ورحمه الله وبركاته",
+        "وعليكم السلام"
+      ]
+    },
+    "questions": {
+      "ar": [
+        "السلام عليكم"
+      ]
+    },
+    "redirectFlow": "",
+    "redirectNode": ""
+  }
+}

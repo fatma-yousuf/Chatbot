@@ -1,0 +1,566 @@
+[
+  {
+    "id": "builtin_text-s5A094",
+    "formData": {
+      "text$ar": "كيف يمكنني مساعدتك يا صديقي؟",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "كيف يمكنني المساعده ؟",
+        "هذه هي الخدمات التي يمكنني ان اقدمها لك يا صديقي , اختر احدهما.",
+        "انظر هذه بعض الخدمات التي اقدمها لك يا صديقي."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-20T20:19:52.584Z",
+    "modifiedOn": "2024-04-23T09:16:41.708Z"
+  },
+  {
+    "id": "builtin_text-uqjoBt",
+    "formData": {
+      "text$ar": "لا تقلق يا صديق سوف اساعدك في البحث عن الشخص الذي فقدته في اسرع وقت.",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "خفف من روعك يا صديق سوف اساعدك في البحث عن الشخص الذي فقدته عاجلا.",
+        "سوف اساعدك في إيجاد الشخص الذي فقدته يا صديق لا تقلق ."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-20T20:51:09.504Z",
+    "modifiedOn": "2024-04-20T20:51:09.504Z"
+  },
+  {
+    "id": "builtin_text-jPMPjZ",
+    "formData": {
+      "text$ar": "من فضلك ادخل اسم المحافظه التي تريد ان تبحث بداخلها يا صديق.",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "ادخل اسم المحافظه التي تريد ان تبحث بداخلها يا صديق .",
+        "ما اسم المحافظه التي تريد ان نبث بداخلها يا صديق ."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-20T20:53:28.684Z",
+    "modifiedOn": "2024-04-29T12:53:46.457Z"
+  },
+  {
+    "id": "builtin_text-K5FQNW",
+    "formData": {
+      "text$ar": "اهلا بك يا صديقي سوف اساعدك في البحث عن متعلقاتك الشخصيه التي ققدتها .",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "لا تقلق يا صديقي سوف افعل ما بوسعي حتي اساعدك في البحث متعلقاتك الشخصيه التي فقدتها في اسرع وقت.",
+        "لا تحزن يا صديقي سوف افعل ما بوسعي لكي نبحث عن متعلقاتك التي فقدتها عاجلا."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-20T21:51:29.046Z",
+    "modifiedOn": "2024-04-20T21:51:29.046Z"
+  },
+  {
+    "id": "builtin_text-YjP6CN",
+    "formData": {
+      "text$ar": "لقد وجدت هذه الأشخاص ياصديق القي نظره لعل احدهم يكون الشخص الذي فقدته الإسم : {{event.state.session.is_valid.data.0.name}}\n\nالوصف :{{event.state.session.is_valid.data.0.description}}\n\nالحاله :{{event.state.session.is_valid.data.0.condition}}\n\nالعنوان :{{event.state.session.is_valid.data.0.town}} - {{event.state.session.is_valid.data.0.city}}\n\nالشخص المبلغ عنه :{{event.state.session.is_valid.data.0.userName}}\n",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "اترك الحزن يا صديقي وانظر الي هذه الاشخاص لربما يكون احدهم الذي فقدته\nالإسم : {{event.state.session.is_valid.data.0.name}}\n\nالوصف :{{event.state.session.is_valid.data.0.description}}\n\nالحاله :{{event.state.session.is_valid.data.0.condition}}\n\nالعنوان :{{event.state.session.is_valid.data.0.town}} - {{event.state.session.is_valid.data.0.city}}\n\nالشخص المبلغ عنه :{{event.state.session.is_valid.data.0.userName}}\n",
+        "هذه هي النتايج التي وجدتها ياصديقي \nالإسم : {{event.state.session.is_valid.data.0.name}}\n\nالوصف :{{event.state.session.is_valid.data.0.description}}\n\nالحاله :{{event.state.session.is_valid.data.0.condition}}\n\nالعنوان :{{event.state.session.is_valid.data.0.town}} - {{event.state.session.is_valid.data.0.city}}\n\nالشخص المبلغ عنه :{{event.state.session.is_valid.data.0.userName}}\n",
+        "انظر ماذا وجدت لأجلك\nالإسم : {{event.state.session.is_valid.data.0.name}}\n\nالوصف :{{event.state.session.is_valid.data.0.description}}\n\nالحاله :{{event.state.session.is_valid.data.0.condition}}\n\nالعنوان :{{event.state.session.is_valid.data.0.town}} - {{event.state.session.is_valid.data.0.city}}\n\nالشخص المبلغ عنه :{{event.state.session.is_valid.data.0.userName}}",
+        "هذه هي الأشخاص التي وجدتها يا صديق .....\nالإسم : {{event.state.session.is_valid.data.0.name}}\n\nالوصف :{{event.state.session.is_valid.data.0.description}}\n\nالحاله :{{event.state.session.is_valid.data.0.condition}}\n\nالعنوان :{{event.state.session.is_valid.data.0.town}} - {{event.state.session.is_valid.data.0.city}}\n\nالشخص المبلغ عنه :{{event.state.session.is_valid.data.0.userName}}",
+        ""
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-20T22:16:59.702Z",
+    "modifiedOn": "2024-04-29T17:16:30.487Z"
+  },
+  {
+    "id": "builtin_text-3Z9HT6",
+    "formData": {
+      "text$ar": "اعذرني يا صديق لم استطيع ان اجد لك الشخص الذي تبحث عنه, ولكن استطيع ان ارشح لك مجموعه من المستشفيات والملاجئ التي سوف تساعدك في البحث عن فقيدك .",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "لم استطع الحصول علي نتائج تلبي احتياجك , سوف اقدم لك مجموعه من المستشفيات والملاجئ لعلها سوف تساعدك في البحث بشكل اسرع.",
+        "لم اجد الأشخاص التي تبحث عنها في هذه المنطقه حاول في وقت لاحق يا صديق ,ولكن يمكنني ان اقدم لك مجموعه من المستشفيات والملاجئ تواصل معهم للبحث عن فقيدك.",
+        "نأسف علي عدم مساعدتك الأن , يمكنك المحاوله في وقت لاحق , وهذه بعض من المستشفيات و الملاجئ تستطيع ان تبحث بداخلها يا صديق."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-20T22:22:10.142Z",
+    "modifiedOn": "2024-04-26T21:56:38.705Z"
+  },
+  {
+    "id": "builtin_text-PE0sjr",
+    "formData": {
+      "text$ar": "ادخل اسم المحافظه التي تريد ان يظهر لك فيها اسماء المستشفيات والملاجئ لكي تبحث بداخلها .",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "ادخل اسم المحافظه.....",
+        "نريد منك ان تقوم بإدخال اسم المحافظه ....."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-20T22:44:46.145Z",
+    "modifiedOn": "2024-04-20T22:44:46.145Z"
+  },
+  {
+    "id": "builtin_text-r3gWRA",
+    "formData": {
+      "text$ar": "هذه هي النتائج التي حصلت عليها",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "انظر ماذا وجدت",
+        "تواصل مع هذه المستشفيا ت والملاجئ",
+        "اليك بعض من المستشفيات والملاجئ التي تستطيع ان تبحث بداخلهم....."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-20T22:49:50.559Z",
+    "modifiedOn": "2024-04-23T09:19:26.008Z"
+  },
+  {
+    "id": "builtin_text-Fh5bb5",
+    "formData": {
+      "text$ar": "نأسف لعدم الحصول علي نتائج ,حاول في وقت لاحق",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "حدث خطأ,حاول في وقت لاحق.",
+        "عذرا يا صديقي , لم استطيع الحصول علي نتائج ."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-20T22:53:12.644Z",
+    "modifiedOn": "2024-04-20T22:53:12.644Z"
+  },
+  {
+    "id": "builtin_text-OVoxI2",
+    "formData": {
+      "text$ar": "نأسف لعدم الحصول علي نتائج حاول في وقت لاحق....",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "اعذرني يا صديق لم استطع ان اجد لك الشئ الذي فقدته الأن حااول في وقت لاحق...",
+        "لم اجد ما تبحث عنه الأن يا صديق حااول في وقت لاحق....",
+        "لم استطع الحصول علي نتائج في هذه المنطقه الان."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-23T09:02:03.278Z",
+    "modifiedOn": "2024-04-23T09:02:03.278Z"
+  },
+  {
+    "id": "builtin_text--17ibB",
+    "formData": {
+      "text$ar": "انظر ماذا وجدت لأجلك يا صديق....",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "تم العثور علي هذه النتائج في هذه المنطقه....",
+        "يا صديق هدئ من روعك لقدت وجدت هذه النتائج لعل احدهم تكن لك ....",
+        "هذا ما وجدته...",
+        "إليك بعض النتائج التي حصلت عليها يا صديق..."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-23T09:14:42.977Z",
+    "modifiedOn": "2024-04-29T18:21:41.914Z"
+  },
+  {
+    "id": "builtin_text-vBpjA2",
+    "formData": {
+      "text$ar": "نرجوا منك إدخال المحافظه باللغه العربيه....مثل :سوهاج",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "حدث خطا قم بإدخال المحافظه باللغه العربيه....مثل :القاهره",
+        "حدث خطا ,حااول مره اخري بإدخال اسم المحافظه باللغه العربيه..مثل الجيزه"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-23T23:57:20.160Z",
+    "modifiedOn": "2024-04-23T23:57:20.160Z"
+  },
+  {
+    "id": "builtin_text-vpRB7c",
+    "formData": {
+      "text$ar": "الأن يا صديقي سوف اساعدك في انشاء المنشور الخاص بك علي موقعنا اتبع الخطوات الأتيه",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "ساساعدك يا صديق في أنشاء المنشور الخاص بك....ارجوا منك تتبع الخطوات الاتيه...",
+        "هنا سوف اساعدك في إنشاء المنشور الخاص بيك يا صديق اتبع الاتي.....",
+        "مرحبا بك يا صديق ......اتبع الخطوات الاتيه لإنشاء المنشور الخاص بك..."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T14:40:12.684Z",
+    "modifiedOn": "2024-04-24T14:40:12.684Z"
+  },
+  {
+    "id": "builtin_text-OK-4pD",
+    "formData": {
+      "text$ar": "هيا بنا....",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "فلنبدا الان...",
+        "هيا يا صديق..."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T14:43:37.784Z",
+    "modifiedOn": "2024-04-24T14:43:37.784Z"
+  },
+  {
+    "id": "builtin_text-dYpWtW",
+    "formData": {
+      "text$ar": "أدخل الإيميل الخاص بيك",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "أدخل الإيميل التي سجلت بيه في موقعنا...."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T15:01:35.920Z",
+    "modifiedOn": "2024-04-24T15:01:35.920Z"
+  },
+  {
+    "id": "builtin_text-gzvgBI",
+    "formData": {
+      "text$ar": "رقم الهاتفك",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "ما هو رقم هاتفك؟",
+        "ادخل رقم الهاتف"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T15:19:36.014Z",
+    "modifiedOn": "2024-04-24T15:19:36.014Z"
+  },
+  {
+    "id": "builtin_text-Xqj8yN",
+    "formData": {
+      "text$ar": "ادخل مكان الحادث",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "ادخل اسم المحافظه التي حدث بها الحادث",
+        "ادخل اسم المحافظه"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T15:23:49.005Z",
+    "modifiedOn": "2024-04-24T15:23:49.005Z"
+  },
+  {
+    "id": "builtin_text-PK2K2m",
+    "formData": {
+      "text$ar": "ادخل تاريخ الحادثه",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "ما هو تاريخ الحادثه؟",
+        "تاريخ الحادثه"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T15:34:54.648Z",
+    "modifiedOn": "2024-04-24T15:34:54.648Z"
+  },
+  {
+    "id": "builtin_text-kQeTHE",
+    "formData": {
+      "text$ar": "يرجي أن يكون علي صيغه ",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "راعي أن يكون علي صيغه",
+        "صيغه التاريخ"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T15:36:03.811Z",
+    "modifiedOn": "2024-04-24T15:36:03.811Z"
+  },
+  {
+    "id": "builtin_text-Auj89e",
+    "formData": {
+      "text$ar": "العام/الشهر/اليوم   مثل 24/4/2024",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": []
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T15:37:51.378Z",
+    "modifiedOn": "2024-04-24T15:37:51.378Z"
+  },
+  {
+    "id": "builtin_text-8Z7B23",
+    "formData": {
+      "text$ar": "ادخل وقت الإبلاغ / وقوع الحدث",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "وقت الابلاغ ",
+        "وقت وقوع الحدث"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T15:41:43.847Z",
+    "modifiedOn": "2024-04-24T15:41:43.847Z"
+  },
+  {
+    "id": "builtin_text-aDExMo",
+    "formData": {
+      "text$ar": "اتمني ان يكون علي الصيغه الاتيه",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "ادخله علي هذه الصيغه"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T15:42:33.503Z",
+    "modifiedOn": "2024-04-24T15:42:33.503Z"
+  },
+  {
+    "id": "builtin_text-_F8GrY",
+    "formData": {
+      "text$ar": "الدقائق : الساعه  مساءا  ...... مثل  5:44 PM  ",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        " الدقائق : الساعه  صباحا  ..... مثل 5:44 AM"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T15:46:28.062Z",
+    "modifiedOn": "2024-04-24T15:46:28.062Z"
+  },
+  {
+    "id": "builtin_text-hvToyM",
+    "formData": {
+      "text$ar": "ماذا فقدت؟",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "نوع المتعلق المفقود",
+        "هل فقدت هاتفك ام لابك ام اي شئ؟ ارجوك اخبرني"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T16:53:58.931Z",
+    "modifiedOn": "2024-04-24T16:53:58.931Z"
+  },
+  {
+    "id": "builtin_text-vRVP3_",
+    "formData": {
+      "text$ar": "ما مواصفات الشئ المفقود؟",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "اكتب بعض المواصفات الخاصه بالشئ المفقود؟",
+        "اكتب بعض من المواصفات التي تميز الشئ المفقود..."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T17:02:41.192Z",
+    "modifiedOn": "2024-04-24T17:02:41.192Z"
+  },
+  {
+    "id": "builtin_text-fi-Lhk",
+    "formData": {
+      "text$ar": "شكرا لك يا صديق علي هذه المعلومات .... لا تقلق سوف اساعدك في انشاء المنشور الخاص بك.",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "تم يا صديق ... سوف يتم الان إنشاء المنشور الخاص بك.",
+        "تم حفظ المعلومات بنجاح .....الأن يتم إنشاء المنشور الخاص بك."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T17:07:51.159Z",
+    "modifiedOn": "2024-04-24T18:17:22.030Z"
+  },
+  {
+    "id": "builtin_text-6q34Vx",
+    "formData": {
+      "text$ar": "ما إسم الشخص المفقود؟",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "أدخل إسم الشخص المفقود..",
+        "إسم الشخص المفقود.."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T17:36:04.716Z",
+    "modifiedOn": "2024-04-24T17:36:04.716Z"
+  },
+  {
+    "id": "builtin_text-LZvnFK",
+    "formData": {
+      "text$ar": "ادخل عمر الشخص المفقود...",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "ما عمر الشخص المفقود؟",
+        "عمر الشخص المفقود"
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T18:10:33.488Z",
+    "modifiedOn": "2024-04-24T18:10:33.488Z"
+  },
+  {
+    "id": "builtin_text-pdxiGr",
+    "formData": {
+      "text$ar": "ادخل مواصفات الشخص المفقود",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "ما هي مواصفات الشخص المفقود؟",
+        "ادخل بعض مواصفات الشخص المفقود التي تميزه."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-24T18:14:20.437Z",
+    "modifiedOn": "2024-04-24T18:14:20.437Z"
+  },
+  {
+    "id": "builtin_text-iB0h_e",
+    "formData": {
+      "text$ar": "الإسم : {{event.state.session.is_valid.data.1.name}}\n\nالوصف :{{event.state.session.is_valid.data.1.description}}\n\nالحاله :{{event.state.session.is_valid.data.1.condition}}\n\nالعنوان :{{event.state.session.is_valid.data.1.town}} - {{event.state.session.is_valid.data.1.city}}\n\nالشخص المبلغ عنه :{{event.state.session.is_valid.data.1.userName}}",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        ""
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-29T17:17:14.910Z",
+    "modifiedOn": "2024-05-03T21:33:58.150Z"
+  },
+  {
+    "id": "builtin_text-VxgiXt",
+    "formData": {
+      "text$ar": "الإسم : {{event.state.session.is_valid.data.2.name}}\n\nالوصف :{{event.state.session.is_valid.data.2.description}}\n\nالحاله :{{event.state.session.is_valid.data.2.condition}}\n\nالعنوان :{{event.state.session.is_valid.data.2.town}} - {{event.state.session.is_valid.data.2.city}}\n\nالشخص المبلغ عنه :{{event.state.session.is_valid.data.2.userName}}",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": []
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-29T17:18:01.569Z",
+    "modifiedOn": "2024-04-29T17:18:01.569Z"
+  },
+  {
+    "id": "builtin_text-l4api1",
+    "formData": {
+      "text$ar": "الإسم : {{event.state.session.is_valid.data.4.name}}\n\nالوصف :{{event.state.session.is_valid.data.4.description}}\n\nالحاله :{{event.state.session.is_valid.data.4.condition}}\n\nالعنوان :{{event.state.session.is_valid.data.4.town}} - {{event.state.session.is_valid.data.4.city}}\n\nالشخص المبلغ عنه :{{event.state.session.is_valid.data.4.userName}}",
+      "markdown$ar": true,
+      "typing$ar": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-29T17:18:51.767Z",
+    "modifiedOn": "2024-04-29T17:18:51.767Z"
+  },
+  {
+    "id": "builtin_text-OGExnf",
+    "formData": {
+      "text$ar": "سوف اقوم بترشح بعض من المستشفيات والملاجئ ",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        ""
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-29T17:32:10.344Z",
+    "modifiedOn": "2024-04-29T17:32:10.344Z"
+  },
+  {
+    "id": "builtin_text-jr3a8e",
+    "formData": {
+      "text$ar": "ادخل اسم المحافظه",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "ما اسم المحافظه التي تريد البحث بداخلها....",
+        ""
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-29T17:35:25.121Z",
+    "modifiedOn": "2024-04-29T17:35:25.121Z"
+  },
+  {
+    "id": "builtin_text-aXbTEd",
+    "formData": {
+      "text$ar": "هذه مجموعه من المستشفيات والملاجئ يمكنك التواصل معهم حتي تبحث عن الشخص الذي فقدته",
+      "markdown$ar": true,
+      "typing$ar": true,
+      "variations$ar": [
+        "إليك بعض المستشفيات والملاجئ تواصل معهم لعل الشخص الذي فقدته يوجد هناك.",
+        "إليك هذه النتائج....."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-29T17:43:22.356Z",
+    "modifiedOn": "2024-04-29T17:58:27.553Z"
+  },
+  {
+    "id": "builtin_text-ZqDmW1",
+    "formData": {
+      "text$ar": "الإسم :{{event.state.session.is_valid.data.0.name}}\nالعنوان :{{event.state.session.is_valid.data.0.address}}\nالمحافظه :{{event.state.session.is_valid.data.0.city}}\nرقم التلفون :{{event.state.session.is_valid.data.0.phoneNumber}}",
+      "markdown$ar": true,
+      "typing$ar": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-29T18:02:31.590Z",
+    "modifiedOn": "2024-04-29T18:04:37.221Z"
+  },
+  {
+    "id": "builtin_text-0JQqif",
+    "formData": {
+      "text$ar": "الإسم :{{event.state.session.is_valid.data.1.name}}\nالعنوان :{{event.state.session.is_valid.data.1.address}}\nالمحافظه :{{event.state.session.is_valid.data.1.city}}\nرقم التلفون :{{event.state.session.is_valid.data.1.phoneNumber}}",
+      "markdown$ar": true,
+      "typing$ar": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-29T18:05:10.308Z",
+    "modifiedOn": "2024-04-29T18:05:10.308Z"
+  },
+  {
+    "id": "builtin_text-ePOya7",
+    "formData": {
+      "text$ar": "الإسم :{{event.state.session.is_valid.data.2.name}}\nالعنوان :{{event.state.session.is_valid.data.2.address}}\nالمحافظه :{{event.state.session.is_valid.data.2.city}}\nرقم التلفون :{{event.state.session.is_valid.data.2.phoneNumber}}",
+      "markdown$ar": true,
+      "typing$ar": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-29T18:05:47.912Z",
+    "modifiedOn": "2024-04-29T18:05:47.912Z"
+  },
+  {
+    "id": "builtin_text-a3Yun-",
+    "formData": {
+      "text$ar": "نوعه :{{event.state.session.is_valid.data.0.type}}\nالوصف :{{event.state.session.is_valid.data.0.description}}\nرقم التلفون :{{event.state.session.is_valid.data.0.phoneNumber}}\nالعنوان :{{event.state.session.is_valid.data.0.town}} -{{event.state.session.is_valid.data.0.city}}",
+      "markdown$ar": true,
+      "typing$ar": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2024-04-29T18:31:59.729Z",
+    "modifiedOn": "2024-04-29T18:38:19.924Z"
+  }
+]

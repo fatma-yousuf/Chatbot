@@ -1,0 +1,57 @@
+{
+  "locked": false,
+  "disabled": false,
+  "private": false,
+  "details": {
+    "website": "",
+    "phoneNumber": "",
+    "emailAddress": "",
+    "termsConditions": "",
+    "privacyPolicy": "",
+    "avatarUrl": "/api/v1/bots/BOT_ID_PLACEHOLDER/media/2aay9pl7oahg7slypn01-depositphotos_224275952-stock-illustration-cute-robot-say-chatbot-icon.jpg",
+    "coverPictureUrl": "/api/v1/bots/BOT_ID_PLACEHOLDER/media/zaz8x99pf30zm8gwqmis-depositphotos_224275952-stock-illustration-cute-robot-say-chatbot-icon.jpg"
+  },
+  "$schema": "../../bot.config.schema.json",
+  "description": "",
+  "active": true,
+  "version": "12.30.5",
+  "author": "Botpress, Inc.",
+  "license": "AGPL-3.0",
+  "imports": {
+    "modules": [],
+    "incomingMiddleware": [],
+    "outgoingMiddleware": [],
+    "contentTypes": [
+      "builtin_action-button",
+      "builtin_audio",
+      "builtin_card",
+      "builtin_carousel",
+      "dropdown",
+      "builtin_file",
+      "builtin_image",
+      "builtin_location",
+      "builtin_single-choice",
+      "builtin_text",
+      "builtin_video"
+    ]
+  },
+  "dialog": {
+    "timeoutInterval": "5m"
+  },
+  "logs": {
+    "expiration": "1 week"
+  },
+  "defaultLanguage": "ar",
+  "languages": [
+    "ar"
+  ],
+  "id": "final_hope",
+  "name": "Final_Hope",
+  "pipeline_status": {
+    "current_stage": {
+      "id": "prod",
+      "promoted_on": "2024-04-20T19:13:10.477Z",
+      "promoted_by": "fatmayousufmohamed@gmail.com"
+    }
+  }
+}

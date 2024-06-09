@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "id": "entry",
+      "position": {
+        "x": -640,
+        "y": -575
+      }
+    },
+    {
+      "id": "skill-1d4847",
+      "position": {
+        "x": -350,
+        "y": -585
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "entry",
+      "sourcePort": "out0",
+      "target": "skill-1d4847",
+      "points": [
+        {
+          "x": -440,
+          "y": -501
+        },
+        {
+          "x": -349,
+          "y": -567
+        }
+      ]
+    },
+    {
+      "source": "skill-1d4847",
+      "sourcePort": "out5",
+      "target": "entry",
+      "points": [
+        {
+          "x": -150,
+          "y": -396
+        },
+        {
+          "x": -639,
+          "y": -557
+        }
+      ]
+    }
+  ]
+}

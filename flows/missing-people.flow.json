@@ -1,0 +1,73 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "aae42fadde",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-uqjoBt"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-input"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "d0b7393239",
+      "name": "node-input",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-call-api"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-jPMPjZ"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "3640000193",
+      "name": "node-success-people",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-YjP6CN",
+        "say #!builtin_text-iB0h_e",
+        "say #!builtin_text-VxgiXt",
+        "say #!builtin_text-l4api1"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "599eaec04d",
+      "name": "node-call-api",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-success-people"
+        }
+      ],
+      "onEnter": [
+        "API_people {\"town\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

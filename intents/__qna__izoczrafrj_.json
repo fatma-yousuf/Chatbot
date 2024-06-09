@@ -1,0 +1,16 @@
+{
+  "name": "__qna__izoczrafrj_",
+  "entities": [],
+  "contexts": [
+    "global"
+  ],
+  "utterances": {
+    "ar": [
+      "ما هي مهنتك ؟",
+      "ماذا تفعل طوال اليوم ؟",
+      "ما هي وظيفتك ؟",
+      "هل تعمل ؟"
+    ]
+  },
+  "slots": []
+}

@@ -1,0 +1,58 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "29d606ea91",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-OGExnf",
+        "say #!builtin_text-jr3a8e"
+      ],
+      "onReceive": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-call-api"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "1b8b091c59",
+      "name": "node-call-api",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-seccess"
+        }
+      ],
+      "onEnter": [
+        "API_hospital {\"town\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "fd5befabed",
+      "name": "node-seccess",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-aXbTEd",
+        "say #!builtin_text-ZqDmW1",
+        "say #!builtin_text-0JQqif",
+        "say #!builtin_text-ePOya7"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "2d1ec58896",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-K5FQNW"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-twon"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "15fefd3138",
+      "name": "node-twon",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-call-api"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-jPMPjZ"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "77bcbb72cc",
+      "name": "node-success",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-image"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text--17ibB",
+        "say #!builtin_text-a3Yun-"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "5a99898c4a",
+      "name": "node-call-api",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-success"
+        }
+      ],
+      "onEnter": [
+        "API-Things {\"town\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "4a28b028f8",
+      "name": "node-image",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_image--dohkm"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

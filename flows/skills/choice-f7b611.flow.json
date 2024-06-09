@@ -1,0 +1,104 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "g758cee30y",
+    "contentId": "builtin_single-choice-xBuGas",
+    "invalidContentId": "",
+    "keywords": {
+      "Accidents": [
+        "Accidents",
+        "حوادث"
+      ],
+      "losties": [
+        "losties",
+        "مفقودات"
+      ],
+      "shelters": [
+        "shelters",
+        "ملاجئ"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 3,
+      "repeatChoicesOnInvalid": false,
+      "variableName": ""
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-invalid-count-g758cee30y\",\"value\": 0}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-valid-g758cee30y\",\"value\": null}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-ret-g758cee30y\",\"value\": null}",
+        "say #!builtin_single-choice-xBuGas {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "110038"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"g758cee30y\",\"contentId\":\"builtin_single-choice-xBuGas\",\"invalidContentId\":\"\",\"keywords\":{\"Accidents\":[\"Accidents\",\"حوادث\"],\"losties\":[\"losties\",\"مفقودات\"],\"shelters\":[\"shelters\",\"ملاجئ\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false,\"variableName\":\"\"}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-g758cee30y'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "134706"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"g758cee30y\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-g758cee30y']) > Number(3)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "073571"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "468762"
+    }
+  ]
+}

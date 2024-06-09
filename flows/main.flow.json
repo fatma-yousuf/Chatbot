@@ -1,0 +1,67 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": []
+  },
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "entry",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "choice-choice"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-s5A094"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-1d4847",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-choice",
+      "flow": "skills/choice-1d4847.flow.json",
+      "next": [
+        {
+          "caption": "User picked [missing...]",
+          "condition": "temp['skill-choice-ret-gpy9dm8y3o'] == \"missing people\"",
+          "node": "missing-people.flow.json"
+        },
+        {
+          "caption": "User picked [missing...]",
+          "condition": "temp['skill-choice-ret-gpy9dm8y3o'] == \"missing things\"",
+          "node": "missing-things.flow.json"
+        },
+        {
+          "caption": "User picked [tips]",
+          "condition": "temp['skill-choice-ret-gpy9dm8y3o'] == \"tips\"",
+          "node": "tips-guidelines.flow.json"
+        },
+        {
+          "caption": "User picked [create ...]",
+          "condition": "temp['skill-choice-ret-gpy9dm8y3o'] == \"create post\"",
+          "node": "create-post.flow.json"
+        },
+        {
+          "caption": "User picked [hospita...]",
+          "condition": "temp['skill-choice-ret-gpy9dm8y3o'] == \"hospital 🏥 \"",
+          "conditionType": "raw",
+          "node": "hospital-and-shelter.flow.json"
+        },
+        {
+          "caption": "User picked [main]",
+          "condition": "temp['skill-choice-ret-gpy9dm8y3o'] == \"main\"",
+          "node": "entry"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    }
+  ]
+}

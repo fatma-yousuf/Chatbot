@@ -1,0 +1,100 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "k64PZR2gB6",
+    "contentId": "builtin_single-choice-Il7pvD",
+    "invalidContentId": "",
+    "keywords": {
+      "male": [
+        "male",
+        "ذكر"
+      ],
+      "female": [
+        "female",
+        "أنثي"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 3,
+      "repeatChoicesOnInvalid": false,
+      "variableName": ""
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-invalid-count-k64PZR2gB6\",\"value\": 0}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-valid-k64PZR2gB6\",\"value\": null}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-ret-k64PZR2gB6\",\"value\": null}",
+        "say #!builtin_single-choice-Il7pvD {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "020124"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"k64PZR2gB6\",\"contentId\":\"builtin_single-choice-Il7pvD\",\"invalidContentId\":\"\",\"keywords\":{\"male\":[\"male\",\"ذكر\"],\"female\":[\"female\",\"أنثي\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false,\"variableName\":\"\"}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-k64PZR2gB6'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "322875"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"k64PZR2gB6\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-k64PZR2gB6']) > Number(3)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "970030"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "508310"
+    }
+  ]
+}

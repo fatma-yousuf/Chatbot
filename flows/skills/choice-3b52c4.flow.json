@@ -1,0 +1,100 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "l5e4dt25cc",
+    "contentId": "builtin_single-choice-vsJT1D",
+    "invalidContentId": "",
+    "keywords": {
+      "lost": [
+        "lost",
+        "البلاغ عن مفقود"
+      ],
+      "find": [
+        "find",
+        "البلاغ عن إيجاد مفقود"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 3,
+      "repeatChoicesOnInvalid": false,
+      "variableName": ""
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-invalid-count-l5e4dt25cc\",\"value\": 0}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-valid-l5e4dt25cc\",\"value\": null}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-ret-l5e4dt25cc\",\"value\": null}",
+        "say #!builtin_single-choice-vsJT1D {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "908131"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"l5e4dt25cc\",\"contentId\":\"builtin_single-choice-vsJT1D\",\"invalidContentId\":\"\",\"keywords\":{\"lost\":[\"lost\",\"البلاغ عن مفقود\"],\"find\":[\"find\",\"البلاغ عن إيجاد مفقود\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false,\"variableName\":\"\"}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-l5e4dt25cc'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "067973"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"l5e4dt25cc\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-l5e4dt25cc']) > Number(3)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "340267"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "744627"
+    }
+  ]
+}

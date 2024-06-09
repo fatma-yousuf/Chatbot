@@ -1,0 +1,25 @@
+{
+  "id": "b6cmnhq3hm_",
+  "data": {
+    "action": "text",
+    "contexts": [
+      "global"
+    ],
+    "enabled": true,
+    "answers": {
+      "ar": [
+        "انني بخير يا صديق",
+        "في أحسن حاال يا صديق",
+        "الحمدلله دائما بخير "
+      ]
+    },
+    "questions": {
+      "ar": [
+        "  كيف حالك ",
+        "  أخبارك "
+      ]
+    },
+    "redirectFlow": "",
+    "redirectNode": ""
+  }
+}

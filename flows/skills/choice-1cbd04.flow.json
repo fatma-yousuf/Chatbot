@@ -1,0 +1,100 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "7ovir95y9z",
+    "contentId": "builtin_single-choice-w77A8D",
+    "invalidContentId": "",
+    "keywords": {
+      "missing people": [
+        "missing people",
+        "شخص مفقود"
+      ],
+      "missing things": [
+        "missing things",
+        "متعلقات شخصيه "
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 3,
+      "repeatChoicesOnInvalid": false,
+      "variableName": ""
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-invalid-count-7ovir95y9z\",\"value\": 0}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-valid-7ovir95y9z\",\"value\": null}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"skill-choice-ret-7ovir95y9z\",\"value\": null}",
+        "say #!builtin_single-choice-w77A8D {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "563418"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"7ovir95y9z\",\"contentId\":\"builtin_single-choice-w77A8D\",\"invalidContentId\":\"\",\"keywords\":{\"missing people\":[\"missing people\",\"شخص مفقود\"],\"missing things\":[\"missing things\",\"متعلقات شخصيه \"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false,\"variableName\":\"\"}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-7ovir95y9z'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "811980"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"7ovir95y9z\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-7ovir95y9z']) > Number(3)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "456433"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "189900"
+    }
+  ]
+}

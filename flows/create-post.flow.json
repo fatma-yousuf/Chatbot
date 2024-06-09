@@ -1,0 +1,857 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "e4596abf2c",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-vpRB7c",
+        "builtin/wait {\"delay\":\"500\"}",
+        "say #!builtin_text-OK-4pD",
+        "builtin/wait {\"delay\":\"500\"}"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-email"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "3613fe6073",
+      "name": "node-email",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-email"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-dYpWtW"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "58add6557a",
+      "name": "node-save-email",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-num-phone"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"email\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "4881a92c16",
+      "name": "node-num-phone",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-num-phone"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-gzvgBI"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "eb830092b1",
+      "name": "node-save-num-phone",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-location"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"phone\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "fdc4508008",
+      "name": "node-location",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-location"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Xqj8yN"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "d16a731776",
+      "name": "node-save-location",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-date"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"location\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "486f58896f",
+      "name": "node-date",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-date"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-PK2K2m",
+        "say #!builtin_text-kQeTHE",
+        "say #!builtin_text-Auj89e"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "ca6c01f589",
+      "name": "node-save-date",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-time"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"date\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "18897dbc54",
+      "name": "node-time",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-time"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-8Z7B23",
+        "say #!builtin_text-aDExMo",
+        "say #!builtin_text-_F8GrY"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "8ed93b7b41",
+      "name": "node-save-time",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-chose"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"time\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-3b52c4",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-chose",
+      "flow": "skills/choice-3b52c4.flow.json",
+      "next": [
+        {
+          "caption": "User picked [lost]",
+          "condition": "temp['skill-choice-ret-l5e4dt25cc'] == \"lost\"",
+          "node": "node-type"
+        },
+        {
+          "caption": "User picked [find]",
+          "condition": "temp['skill-choice-ret-l5e4dt25cc'] == \"find\"",
+          "node": "node-type2"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "dd21bb4a93",
+      "name": "node-type",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-type-post"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"type\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "37132b50ec",
+      "name": "node-type2",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-type-post-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"type\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-1cbd04",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-type-post",
+      "flow": "skills/choice-1cbd04.flow.json",
+      "next": [
+        {
+          "caption": "User picked [missing...]",
+          "condition": "temp['skill-choice-ret-7ovir95y9z'] == \"missing people\"",
+          "node": "node-save-type-post-copy-1"
+        },
+        {
+          "caption": "User picked [missing...]",
+          "condition": "temp['skill-choice-ret-7ovir95y9z'] == \"missing things\"",
+          "node": "node-save-type-post"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "skill-ba0e14",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-type-post-copy",
+      "flow": "skills/choice-ba0e14.flow.json",
+      "next": [
+        {
+          "caption": "User picked [missing...]",
+          "condition": "temp['skill-choice-ret-fM8_U6PeHn'] == \"missing people\"",
+          "node": "node-save-type-post-copy-2"
+        },
+        {
+          "caption": "User picked [missing...]",
+          "condition": "temp['skill-choice-ret-fM8_U6PeHn'] == \"missing things\"",
+          "node": "node-save-type-post-copy"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "00a08ca5e3",
+      "name": "node-things-type",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-things-type"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-hvToyM"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "32cdee716d",
+      "name": "node-save-things-type",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-description"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"things_type\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "ee4d688154",
+      "name": "node-things-type-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-things-type-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-hvToyM"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "0ce3f861e6",
+      "name": "node-save-things-type-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-description-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"things_type\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "10c4033b2b",
+      "name": "node-description",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-description"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-vRVP3_"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "c1b465631a",
+      "name": "node-save-description",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-thanks"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"description \",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "df98702c28",
+      "name": "node-thanks",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json"
+        }
+      ],
+      "onEnter": [
+        "create_posts {}",
+        "say #!builtin_text-fi-Lhk"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "e4cb3c38c5",
+      "name": "node-description-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-description-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-vRVP3_"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "897ff52be5",
+      "name": "node-save-description-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-thanks-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"description \",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "e2a552353e",
+      "name": "node-thanks-copy",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json"
+        }
+      ],
+      "onEnter": [
+        "create_posts {}",
+        "say #!builtin_text-fi-Lhk"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "412981ebd5",
+      "name": "node-name",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-name"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-6q34Vx"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "a1a8bf08e1",
+      "name": "node-save-name",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-type-states"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"name\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-f7b611",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-type-states",
+      "flow": "skills/choice-f7b611.flow.json",
+      "next": [
+        {
+          "caption": "User picked [Acciden...]",
+          "condition": "temp['skill-choice-ret-g758cee30y'] == \"Accidents\"",
+          "node": "node-save-states"
+        },
+        {
+          "caption": "User picked [losties]",
+          "condition": "temp['skill-choice-ret-g758cee30y'] == \"losties\"",
+          "node": "node-save-states"
+        },
+        {
+          "caption": "User picked [shelters]",
+          "condition": "temp['skill-choice-ret-g758cee30y'] == \"shelters\"",
+          "node": "node-save-states"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "72837b2b77",
+      "name": "node-save-states",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-type-person"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"states\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "36a42c3e93",
+      "name": "node-save-type-post",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-things-type"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"type_post\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "47d43f0910",
+      "name": "node-save-type-post-copy-1",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-name"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"type_post\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "0dea3e98fa",
+      "name": "node-save-type-post-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-things-type-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"type_post\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "c923cc826e",
+      "name": "node-save-type-post-copy-2",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-name-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"type_post\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "61d1ff1cf0",
+      "name": "node-name-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-name-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-6q34Vx"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "6ba4355b23",
+      "name": "node-save-name-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-type-states-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"name\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-a61a12",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-type-states-copy",
+      "flow": "skills/choice-a61a12.flow.json",
+      "next": [
+        {
+          "caption": "User picked [Acciden...]",
+          "condition": "temp['skill-choice-ret-iyQojGM4p0'] == \"Accidents\"",
+          "node": "node-save-states-copy"
+        },
+        {
+          "caption": "User picked [losties]",
+          "condition": "temp['skill-choice-ret-iyQojGM4p0'] == \"losties\"",
+          "node": "node-save-states-copy"
+        },
+        {
+          "caption": "User picked [shelters]",
+          "condition": "temp['skill-choice-ret-iyQojGM4p0'] == \"shelters\"",
+          "node": "node-save-states-copy"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "5ad23456ef",
+      "name": "node-save-states-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-type-person-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"states\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-335df3",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-type-person",
+      "flow": "skills/choice-335df3.flow.json",
+      "next": [
+        {
+          "caption": "User picked [male]",
+          "condition": "temp['skill-choice-ret-kswvlh4v70'] == \"male\"",
+          "node": "node-save-type-person"
+        },
+        {
+          "caption": "User picked [female]",
+          "condition": "temp['skill-choice-ret-kswvlh4v70'] == \"female\"",
+          "node": "node-save-type-person"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "560e113748",
+      "name": "node-save-type-person",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-age"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"type_person \",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "2947ca0f21",
+      "name": "node-age",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-save-age"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-LZvnFK"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "e84993d9dd",
+      "name": "node-save-age",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-description-person"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"age\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "53f9f6e0f0",
+      "name": "node-description-person",
+      "next": [
+        {
+          "condition": "true",
+          "node": "save-description"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-pdxiGr"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "5dc096d158",
+      "name": "save-description",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-thanks-copy-1"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"description_person\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "7ad154cf54",
+      "name": "node-thanks-copy-1",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json"
+        }
+      ],
+      "onEnter": [
+        "create_posts {}",
+        "say #!builtin_text-fi-Lhk"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-a774d0",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-type-person-copy",
+      "flow": "skills/choice-a774d0.flow.json",
+      "next": [
+        {
+          "caption": "User picked [male]",
+          "condition": "temp['skill-choice-ret-k64PZR2gB6'] == \"male\"",
+          "node": "node-save-type-person-copy"
+        },
+        {
+          "caption": "User picked [female]",
+          "condition": "temp['skill-choice-ret-k64PZR2gB6'] == \"female\"",
+          "node": "node-save-type-person-copy"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "1dc59f9844",
+      "name": "node-save-type-person-copy",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-age-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"type_person \",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "67280c994d",
+      "name": "node-age-copy",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-save-age-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-LZvnFK"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "d4b124b058",
+      "name": "node-save-age-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-description-person-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"age\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "701c2b7636",
+      "name": "node-description-person-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "save-description-copy"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-pdxiGr"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "9741bfcfbf",
+      "name": "save-description-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-thanks-copy-1-copy"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"description_person\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "231b6fc0ed",
+      "name": "node-thanks-copy-1-copy",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json"
+        }
+      ],
+      "onEnter": [
+        "create_posts {}",
+        "say #!builtin_text-fi-Lhk"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}
